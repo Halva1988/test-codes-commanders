@@ -9,6 +9,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	background-color: rgb(226, 209, 188);
 }
 
 #root {

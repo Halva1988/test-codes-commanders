@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
-import { ToastProps } from "../../types/type";
+import { IToastProps } from "../../types/type";
 import styles from "./Toast.module.css"
 
 
-const Toast = ({ message, onClose }: ToastProps): JSX.Element => {
+const Toast = ({ message, onClose }: IToastProps): JSX.Element => {
   const timer = useRef<NodeJS.Timeout>();
   useEffect(() => {
     timer.current = setTimeout(onClose, 3000);

@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IPost, IUser } from "../types/type";
+import { IPost, IPostInfo, IUser } from "../types/type";
 
 export const postsApi = createApi({
 	reducerPath: "api",
@@ -13,7 +13,14 @@ export const postsApi = createApi({
 		getUserByUsername: builder.query<IUser[], string>({
 			query: (username) => `users?username=${username}`,
 		}),
+		getComments: builder.query<IPostInfo[], string>({
+			query: (id) => `comments?id=${id}`,
+		}),
 	}),
 });
 
-export const { useGetPostsQuery, useGetUserByUsernameQuery } = postsApi;
+export const {
+	useGetPostsQuery,
+	useGetUserByUsernameQuery,
+	useGetCommentsQuery,
+} = postsApi;

@@ -10,30 +10,29 @@ import Toast from "../../components/toast/Toast";
 
 const UserInfo = () => {
 	const [username, setUsername] = useState("");
-  const [toastMessage, setToastMessage] = useState("");
+	const [toastMessage, setToastMessage] = useState("");
 	const dispatch = useDispatch();
 	const user = useSelector((state: RootState) => state.user.user);
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-	const { data, error, isLoading } = useGetUserByUsernameQuery(username);  
+	const { data, error, isLoading } = useGetUserByUsernameQuery(username);
 
 	if (error) {
 		handleError(error);
 	}
 	const handleSignIn = (event: React.FormEvent) => {
-    event.preventDefault();
-    
+		event.preventDefault();
 		if (data && data.length > 0) {
 			dispatch(setUser(data[0]));
-      navigate("/");
+			navigate("/");
 		} else {
-      setToastMessage("User not found");
-    }
+			setToastMessage("User not found");
+		}
 	};
 
-  const handleCloseToast = () => {
-    setToastMessage("");
-  };
+	const handleCloseToast = () => {
+		setToastMessage("");
+	};
 
 	return (
 		<div className={styles.container}>
@@ -52,11 +51,10 @@ const UserInfo = () => {
 					</button>
 				</form>
 			)}
-       {toastMessage && (
-         <Toast message={toastMessage} onClose={handleCloseToast}/>
-       )}      
-			{isLoading && <p>Loading...</p>}
-			{error && <p>Error occurred. Check console for details.</p>}
+			{isLoading && <h2>Loading...</h2>}
+			{toastMessage && (
+				<Toast message={toastMessage} onClose={handleCloseToast} />
+			)}
 		</div>
 	);
 };

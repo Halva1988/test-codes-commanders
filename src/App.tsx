@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./pages/home/home";
-import SignIn from "./pages/signin/signIn";
+import UserInfo from "./pages/userInfo/userInfo";
 
 function App() {
 	return (
@@ -9,7 +9,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/signin" element={<SignIn />} />
+				<Route path="/userInfo" element={<UserInfo />} />
 			</Routes>
 		</Router>
 	);

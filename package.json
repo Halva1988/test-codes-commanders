@@ -2,7 +2,7 @@
   "name": "test-codes-commanders",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://halva1988.github.io/test-codes-commanders",
+  "homepage": "https://halva1988.github.io/test-codes-commanders/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
     "@testing-library/jest-dom": "^5.17.0",

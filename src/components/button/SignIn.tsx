@@ -4,17 +4,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../app/store";
 import { clearUser } from "../../slices/userSlice";
 
-const SignIn = () => {
+const SignIn: React.FC = (): JSX.Element => {
 	const user = useSelector((state: RootState) => state.user.user);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	const handleSingIn = () => {
-		navigate("/userInfo");
+		navigate("/login");
 	};
 
 	const handleLogOut = () => {
 		dispatch(clearUser());
+		navigate("/");
 	};
 
 	return (

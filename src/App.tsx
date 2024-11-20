@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./pages/home/home";
-import UserInfo from "./pages/userInfo/userInfo";
+import Login from "./pages/login/login";
 import PostInfo from "./pages/postInfo/postInfo";
+import UserInfo from "./pages/userInfo/userInfo";
+
 
 function App() {
 	return (
@@ -10,6 +12,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/login" element={<Login />} />
 				<Route path="/userInfo" element={<UserInfo />} />
 				<Route path="/postInfo/:postId" element={<PostInfo />} />
 			</Routes>

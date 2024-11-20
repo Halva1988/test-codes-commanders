@@ -45,3 +45,8 @@ export interface IPostInfo {
 	email: string;
 	body: string;
 }
+
+export interface IMapLinkProps {
+  lat: number;
+  lng: number;
+}

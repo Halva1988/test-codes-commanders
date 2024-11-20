@@ -8,7 +8,7 @@ import UserInfo from "./pages/userInfo/userInfo";
 
 function App() {
 	return (
-		<Router>
+		<Router basename="/test-codes-commanders">
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />

@@ -10,11 +10,13 @@ const Header: React.FC = (): JSX.Element => {
 
 	return (
 		<header className={styles.header}>
-			<Link to="/">
-				<div className={styles.logo}>Logo</div>
-			</Link>
-			{user ? <UserLogo /> : ""}
-			<SignIn />
+			<div className={styles.wrapper}>
+				<Link to="/">
+					<div className={styles.logo}>Logo</div>
+				</Link>
+				{user ? <UserLogo /> : ""}
+				<SignIn />
+			</div>
 		</header>
 	);
 };

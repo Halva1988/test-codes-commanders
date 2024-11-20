@@ -10,7 +10,7 @@ Test Codes Commanders - это React-приложение, использующ�
 ## Установка
 1. Клонируйте репозиторий:
     ```bash
-    git clone https://github.com/your-username/test-codes-commanders.git
+    git clone https://github.com/Halva1988/test-codes-commanders.git
     ```
 2. Перейдите в директорию проекта:
     ```bash

@@ -2,7 +2,7 @@ import styles from "./posts.module.css";
 import Post from "../../components/main/Post";
 import { useGetPostsQuery } from "../../services/postApi";
 
-const Home = (): JSX.Element => {
+const Home = (): JSX.Element => {  
   const {data: posts, error, isLoading} = useGetPostsQuery();
 
   return (

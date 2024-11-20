@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-codes-commanders/static/css/main.d7f0a633.css",
+    "main.js": "/test-codes-commanders/static/js/main.cbf83a87.js",
+    "index.html": "/test-codes-commanders/index.html",
+    "main.d7f0a633.css.map": "/test-codes-commanders/static/css/main.d7f0a633.css.map",
+    "main.cbf83a87.js.map": "/test-codes-commanders/static/js/main.cbf83a87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7f0a633.css",
+    "static/js/main.cbf83a87.js"
+  ]
+}
